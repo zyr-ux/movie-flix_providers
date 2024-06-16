@@ -5,7 +5,7 @@ import { NotFoundError } from '@/utils/errors';
 
 const universalScraper = async (ctx: MovieScrapeContext | ShowScrapeContext) => {
   const apiRes: { url: string } = await ctx.fetcher<{ url: string }>(
-    https://vidsrcme.wafflehacker.io/$%7Bctx.media.type === 'movie' ? 'movie' : 'tv'}`,
+    `https://vidsrcme.wafflehacker.io/$%7Bctx.media.type === 'movie' ? 'movie' : 'tv'}`,
     {
       query: {
         tmdbId: ctx.media.tmdbId,
