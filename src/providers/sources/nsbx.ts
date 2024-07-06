@@ -24,7 +24,7 @@ async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promis
   const embeds = res.providers.map((provider: string) => {
     return {
       embedId: provider,
-      url: `${JSON.stringify(query)}.${res.endpoint}`,
+      url: `${JSON.stringify(query)}|${res.endpoint}`,
     };
   });
 

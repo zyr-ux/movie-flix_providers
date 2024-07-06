@@ -19,7 +19,7 @@ function embed(provider: { id: string; rank: number }) {
     rank: provider.rank,
     disabled: false,
     async scrape(ctx) {
-      const [query, baseUrl] = ctx.url.split('.');
+      const [query, baseUrl] = ctx.url.split('|');
 
       const search = await ctx.fetcher.full('/search', {
         query: {
