@@ -23,7 +23,7 @@ function embed(provider: { id: string; rank: number }) {
 
       const search = await ctx.fetcher.full('/search', {
         query: {
-          query: encodeURIComponent(query),
+          query,
           provider: provider.id,
         },
         credentials: 'include',
@@ -37,7 +37,7 @@ function embed(provider: { id: string; rank: number }) {
 
       const result = await ctx.fetcher('/provider', {
         query: {
-          resourceId: encodeURIComponent(search.body.url),
+          resourceId: search.body.url,
           provider: provider.id,
         },
         credentials: 'include',
